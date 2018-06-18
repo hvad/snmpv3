@@ -3,7 +3,7 @@ FROM fedora:latest
 
 MAINTAINER David Hannequin
 # Installation de l'agent SNMP
-RUN dnf update -y && dnf install -y net-snmp net-snmp-utils && yum clean all
+RUN dnf update -y && dnf install -y net-snmp net-snmp-utils && dnf clean all
 # Fichier de configuration de l'agent SNMP
 COPY snmpd.conf /etc/snmp/snmpd.conf
 # Create SNMPv3 user and password
